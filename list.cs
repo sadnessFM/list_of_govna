@@ -10,10 +10,7 @@ namespace ConsoleApp1
 
         public void Print(speesok<int> list)
         {
-            foreach(int item in list)
-            {
-                Console.WriteLine(item);
-            }
+            foreach(int item in list) Console.WriteLine(item);
         }
         
         public void Add(T data)
@@ -23,7 +20,7 @@ namespace ConsoleApp1
                 throw new ArgumentNullException(nameof(data));
             }
             
-            Item<T> item = new Item<T>(data);
+            Item<T> item = new(data);
 
             if (_head == null)
                 _head = item;
@@ -78,7 +75,9 @@ namespace ConsoleApp1
             _tail = null;
             Count = 0;
         }
-        
+
+        public int GetCount() => Count;
+
         public IEnumerator<T> GetEnumerator()
         {
             Item<T>? current = _head;

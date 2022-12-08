@@ -5,9 +5,7 @@ public class Item<T>
     public Item(T data)
     {
         if(data == null)
-        {
             throw new ArgumentNullException(nameof(data));
-        }
         Data = data;
     }
     

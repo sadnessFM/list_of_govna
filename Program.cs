@@ -13,5 +13,10 @@ internal class Program
         list.Delete(17);
         
         list.Print(list);
+        Console.WriteLine(list.GetCount());
+        Console.WriteLine();
+        list.Delete(42);
+        list.Print(list);
+        Console.WriteLine(list.GetCount());
     }
 }
